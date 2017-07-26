@@ -73,8 +73,6 @@ def list_projects():
         grade_info = (ghub, grade[1], student)
         grades.append(grade_info)
 
-
-
     # return render_template("project-info.html", title=proj_name,
     #                                             description=result[1],
     #                                             max_grade=result[2])
