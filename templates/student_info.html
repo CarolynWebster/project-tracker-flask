@@ -15,7 +15,7 @@
     <tr>
   {% for grade in grades %}
     <tr>
-        <td>{{ grade[0] }}</td>
+        <td><a href="projects?title={{ grade[0] }}">{{ grade[0] }}</a></td>
         <td>{{ grade[1] }}</td>
     </tr>
   {% endfor %}

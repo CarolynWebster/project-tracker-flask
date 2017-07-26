@@ -157,6 +157,21 @@ def get_grades_by_title(title):
     return rows
 
 
+def get_proj_info(title):
+    """returns info about a specific project in the database"""
+
+    QUERY = """
+            SELECT title, description, max_grade
+            FROM projects
+            WHERE title = :title
+            """
+
+    cursor = db.session.execute(QUERY, {'title': title})
+    result = cursor.fetchone()
+
+    return result
+
+
 def handle_input():
     """Main loop.
 
